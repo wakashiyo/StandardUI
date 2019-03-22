@@ -12,9 +12,9 @@
 		599BCF7B2244FB370026D4B9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599BCF7A2244FB370026D4B9 /* Extensions.swift */; };
 		599BCF7D2244FBE70026D4B9 /* sampleImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 599BCF7C2244FBE70026D4B9 /* sampleImage.png */; };
 		599BCF822244FC370026D4B9 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599BCF812244FC370026D4B9 /* Data.swift */; };
+		599BCF85224527CD0026D4B9 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599BCF83224527CD0026D4B9 /* CardViewController.swift */; };
+		599BCF86224527CD0026D4B9 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 599BCF84224527CD0026D4B9 /* CardViewController.xib */; };
 		59B33028223FE9B200A7A4CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B33027223FE9B200A7A4CE /* AppDelegate.swift */; };
-		59B3302A223FE9B200A7A4CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B33029223FE9B200A7A4CE /* ViewController.swift */; };
-		59B3302D223FE9B300A7A4CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59B3302B223FE9B300A7A4CE /* Main.storyboard */; };
 		59B3302F223FE9B500A7A4CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59B3302E223FE9B500A7A4CE /* Assets.xcassets */; };
 		59B33032223FE9B500A7A4CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59B33030223FE9B500A7A4CE /* LaunchScreen.storyboard */; };
 		59B3303D223FE9B500A7A4CE /* CardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B3303C223FE9B500A7A4CE /* CardUITests.swift */; };
@@ -44,10 +44,10 @@
 		599BCF7A2244FB370026D4B9 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		599BCF7C2244FBE70026D4B9 /* sampleImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sampleImage.png; sourceTree = "<group>"; };
 		599BCF812244FC370026D4B9 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		599BCF83224527CD0026D4B9 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
+		599BCF84224527CD0026D4B9 /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
 		59B33024223FE9B200A7A4CE /* CardUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59B33027223FE9B200A7A4CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		59B33029223FE9B200A7A4CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		59B3302C223FE9B300A7A4CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59B3302E223FE9B500A7A4CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		59B33031223FE9B500A7A4CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		59B33033223FE9B500A7A4CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -135,13 +135,13 @@
 				599BCF7F2244FC0E0026D4B9 /* Data */,
 				599BCF7E2244FC040026D4B9 /* Image */,
 				59B33027223FE9B200A7A4CE /* AppDelegate.swift */,
-				59B33029223FE9B200A7A4CE /* ViewController.swift */,
-				59B3302B223FE9B300A7A4CE /* Main.storyboard */,
 				59B3302E223FE9B500A7A4CE /* Assets.xcassets */,
 				59B33030223FE9B500A7A4CE /* LaunchScreen.storyboard */,
 				59B33033223FE9B500A7A4CE /* Info.plist */,
 				599BCF762244F9CE0026D4B9 /* CollectionViewCell.swift */,
 				599BCF772244F9CE0026D4B9 /* CollectionViewCell.xib */,
+				599BCF83224527CD0026D4B9 /* CardViewController.swift */,
+				599BCF84224527CD0026D4B9 /* CardViewController.xib */,
 			);
 			path = CardUI;
 			sourceTree = "<group>";
@@ -271,7 +271,7 @@
 				59B33032223FE9B500A7A4CE /* LaunchScreen.storyboard in Resources */,
 				59B3302F223FE9B500A7A4CE /* Assets.xcassets in Resources */,
 				599BCF792244F9CE0026D4B9 /* CollectionViewCell.xib in Resources */,
-				59B3302D223FE9B300A7A4CE /* Main.storyboard in Resources */,
+				599BCF86224527CD0026D4B9 /* CardViewController.xib in Resources */,
 				599BCF7D2244FBE70026D4B9 /* sampleImage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,8 +297,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59B3302A223FE9B200A7A4CE /* ViewController.swift in Sources */,
 				599BCF822244FC370026D4B9 /* Data.swift in Sources */,
+				599BCF85224527CD0026D4B9 /* CardViewController.swift in Sources */,
 				59B33028223FE9B200A7A4CE /* AppDelegate.swift in Sources */,
 				599BCF782244F9CE0026D4B9 /* CollectionViewCell.swift in Sources */,
 				599BCF7B2244FB370026D4B9 /* Extensions.swift in Sources */,
@@ -337,14 +337,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		59B3302B223FE9B300A7A4CE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				59B3302C223FE9B300A7A4CE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		59B33030223FE9B500A7A4CE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

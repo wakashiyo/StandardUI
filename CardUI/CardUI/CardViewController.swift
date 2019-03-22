@@ -1,20 +1,29 @@
 //
-//  ViewController.swift
+//  CardViewController.swift
 //  CardUI
 //
-//  Created by 吉川昂広 on 2019/03/18.
+//  Created by 吉川昂広 on 2019/03/22.
 //  Copyright © 2019 takahiro yoshikawa. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class CardViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    let cell = CollectionViewCell()
+    struct Dependency {
+        let collectionViewCell: CollectionViewCell
+        let cellData: [String]
+    }
     
-    let data = cellData
+    private var dependency: Dependency!
+    
+    static func makeInstance(dependency: Dependency) -> CardViewController {
+        let viewController = CardViewController()
+        viewController.dependency = dependency
+        return viewController
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +31,7 @@ class ViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         
-        collectionView.registerCustomCell(cell)
+        collectionView.registerCustomCell(dependency.collectionViewCell)
         
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = setCellSize()
@@ -35,21 +44,20 @@ class ViewController: UIViewController {
         let height = width * 3/4
         return CGSize(width: width, height: height)
     }
-
+    
 }
 
-extension ViewController: UICollectionViewDataSource {
+extension CardViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        return dependency.cellData.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let c = collectionView.dequeCustomCell(cell, indexPath)
-        c.setUp(str: data[indexPath.row])
-        return c
+        let cell = collectionView.dequeCustomCell(dependency.collectionViewCell, indexPath)
+        cell.setUp(str: dependency.cellData[indexPath.row])
+        return cell
     }
     
 }
 
-extension ViewController: UICollectionViewDelegate {}
-
+extension CardViewController: UICollectionViewDelegate {}
