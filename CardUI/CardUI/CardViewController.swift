@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CardViewController: UIViewController {
+final class CardViewController: UIViewController, ControllerInjectable {
 
     @IBOutlet weak var collectionView: UICollectionView!
     

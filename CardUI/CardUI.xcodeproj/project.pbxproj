@@ -14,6 +14,7 @@
 		599BCF822244FC370026D4B9 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599BCF812244FC370026D4B9 /* Data.swift */; };
 		599BCF85224527CD0026D4B9 /* CardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599BCF83224527CD0026D4B9 /* CardViewController.swift */; };
 		599BCF86224527CD0026D4B9 /* CardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 599BCF84224527CD0026D4B9 /* CardViewController.xib */; };
+		599BCF88224535BA0026D4B9 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 599BCF87224535BA0026D4B9 /* Injectable.swift */; };
 		59B33028223FE9B200A7A4CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B33027223FE9B200A7A4CE /* AppDelegate.swift */; };
 		59B3302F223FE9B500A7A4CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59B3302E223FE9B500A7A4CE /* Assets.xcassets */; };
 		59B33032223FE9B500A7A4CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59B33030223FE9B500A7A4CE /* LaunchScreen.storyboard */; };
@@ -46,6 +47,7 @@
 		599BCF812244FC370026D4B9 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		599BCF83224527CD0026D4B9 /* CardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViewController.swift; sourceTree = "<group>"; };
 		599BCF84224527CD0026D4B9 /* CardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardViewController.xib; sourceTree = "<group>"; };
+		599BCF87224535BA0026D4B9 /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
 		59B33024223FE9B200A7A4CE /* CardUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59B33027223FE9B200A7A4CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59B3302E223FE9B500A7A4CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				599BCF7A2244FB370026D4B9 /* Extensions.swift */,
+				599BCF87224535BA0026D4B9 /* Injectable.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				599BCF85224527CD0026D4B9 /* CardViewController.swift in Sources */,
 				59B33028223FE9B200A7A4CE /* AppDelegate.swift in Sources */,
 				599BCF782244F9CE0026D4B9 /* CollectionViewCell.swift in Sources */,
+				599BCF88224535BA0026D4B9 /* Injectable.swift in Sources */,
 				599BCF7B2244FB370026D4B9 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
