@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59A3E832224D250000A5F7BF /* TabNoticeable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A3E831224D250000A5F7BF /* TabNoticeable.swift */; };
 		59B19EBF224D020A00533854 /* TwoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B19EBE224D020A00533854 /* TwoPageViewController.swift */; };
 		59B19EC5224D026100533854 /* TwoTabPageMangerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B19EC4224D026100533854 /* TwoTabPageMangerViewController.swift */; };
 		59B19EC7224D066500533854 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B19EC6224D066500533854 /* Injectable.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		59A3E831224D250000A5F7BF /* TabNoticeable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabNoticeable.swift; sourceTree = "<group>"; };
 		59B19EBE224D020A00533854 /* TwoPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoPageViewController.swift; sourceTree = "<group>"; };
 		59B19EC4224D026100533854 /* TwoTabPageMangerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoTabPageMangerViewController.swift; sourceTree = "<group>"; };
 		59B19EC6224D066500533854 /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				59B19EC6224D066500533854 /* Injectable.swift */,
 				59B19EC8224D106800533854 /* TwoTabViewController.swift */,
 				59B19EC9224D106800533854 /* TwoTabViewController.xib */,
+				59A3E831224D250000A5F7BF /* TabNoticeable.swift */,
 			);
 			path = TwoTabPage;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				59B19EBF224D020A00533854 /* TwoPageViewController.swift in Sources */,
 				59B19EC5224D026100533854 /* TwoTabPageMangerViewController.swift in Sources */,
 				59B19ECA224D106800533854 /* TwoTabViewController.swift in Sources */,
+				59A3E832224D250000A5F7BF /* TabNoticeable.swift in Sources */,
 				59B19EC7224D066500533854 /* Injectable.swift in Sources */,
 				59B3309C223FEA4700A7A4CE /* AppDelegate.swift in Sources */,
 			);

@@ -12,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TwoTabViewController" customModule="TwoTabPage" customModuleProvider="target">
             <connections>
+                <outlet property="leftButton" destination="Q0w-fl-jIo" id="iv4-ZY-dMa"/>
+                <outlet property="rightButton" destination="9Dg-UL-3RP" id="IW7-Bp-ziR"/>
+                <outlet property="underLine" destination="1eZ-mT-yzL" id="GPL-Iy-x7M"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
