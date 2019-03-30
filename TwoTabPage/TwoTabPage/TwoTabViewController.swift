@@ -8,13 +8,23 @@
 
 import UIKit
 
-class TwoTabViewController: UIViewController {
+final class TwoTabViewController: UIViewController, ControllerInjectable {
 
     @IBOutlet weak var underLine: UIView!
     @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var leftButton: UIButton!
     
-    var delegate: TabNoticeable?
+    struct Dependency {
+        let pageViewController: TwoPageViewController<RightViewController, LeftViewController>
+    }
+    
+    private var dependency: Dependency!
+    
+    static func makeInstance(dependency: Dependency) -> TwoTabViewController {
+        let viewController = TwoTabViewController()
+        viewController.dependency = dependency
+        return viewController
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,40 +33,10 @@ class TwoTabViewController: UIViewController {
         leftButton.addTarget(self, action: #selector(leftButtonTapped), for: .touchUpInside)
     }
     
-    @objc func rightButtonTapped() {
-        transformUnderLineToLeft()
-    }
+    @objc func rightButtonTapped() {}
     
-    @objc func leftButtonTapped() {
-        transformUnderLineToRight()
-    }
+    @objc func leftButtonTapped() {}
     
-    // direction:   left => right
-    // action:      button Tap
-    func transformUnderLineToRight() {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.underLine.transform = CGAffineTransform(translationX: self.view.frame.width / 2, y: 0)
-        })
-    }
     
-    // direction:   right => left
-    // action:      button Tap
-    func transformUnderLineToLeft() {
-        UIView.animate(withDuration: 0.3, animations: {
-            self.underLine.transform = CGAffineTransform.identity
-        })
-    }
-    
-    // direction:   left => right
-    // action:      page scroll
-    func transformUnderLineToRightByPageScroll(_ val: CGFloat) {
-        underLine.transform = CGAffineTransform(translationX: -val, y: 0)
-    }
-    
-    // direction:   right => left
-    // action:      page scroll
-    func transformUnderLineToLeftByPageScroll(_ val: CGFloat) {
-        underLine.transform = CGAffineTransform(translationX: (UIScreen.main.bounds.width / 2) - val, y: 0)
-    }
 
 }
