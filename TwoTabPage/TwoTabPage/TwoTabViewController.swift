@@ -15,7 +15,7 @@ final class TwoTabViewController: UIViewController, ControllerInjectable {
     @IBOutlet weak var leftButton: UIButton!
     
     struct Dependency {
-        let pageViewController: TwoPageViewController<RightViewController, LeftViewController>
+        let pageViewController: TwoPageViewController<LeftViewController, RightViewController>
     }
     
     private var dependency: Dependency!
@@ -31,6 +31,29 @@ final class TwoTabViewController: UIViewController, ControllerInjectable {
 
         rightButton.addTarget(self, action: #selector(rightButtonTapped), for: .touchUpInside)
         leftButton.addTarget(self, action: #selector(leftButtonTapped), for: .touchUpInside)
+        
+        addChild(dependency.pageViewController)
+        dependency.pageViewController.view
+            .translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(dependency.pageViewController.view)
+        
+        dependency.pageViewController.view
+            .leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor)
+            .isActive = true
+        
+        dependency.pageViewController.view
+            .topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 50)
+            .isActive = true
+        
+        dependency.pageViewController.view
+            .trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
+            .isActive = true
+        
+        dependency.pageViewController.view
+            .bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+            .isActive = true
+        
+        didMove(toParent: self)
     }
     
     @objc func rightButtonTapped() {}

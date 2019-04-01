@@ -16,6 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
+        let viewController =
+            TwoTabViewController.makeInstance(dependency:
+                .init(pageViewController:
+                    TwoPageViewController.makeInstance(dependency:
+                        .init(leftViewController: LeftViewController(),
+                              rightViewController: RightViewController()))))
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = viewController
+        window?.backgroundColor = .white
+        window?.makeKeyAndVisible()
+        
         return true
     }
 
