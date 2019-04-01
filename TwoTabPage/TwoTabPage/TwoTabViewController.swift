@@ -8,11 +8,11 @@
 
 import UIKit
 
-final class TwoTabViewController: UIViewController, ControllerInjectable {
+final class TwoTabViewController: UIViewController, ControllerInjectable, PageViewControllerNoticeable {
 
     @IBOutlet weak var underLine: UIView!
-    @IBOutlet weak var rightButton: UIButton!
     @IBOutlet weak var leftButton: UIButton!
+    @IBOutlet weak var rightButton: UIButton!
     
     struct Dependency {
         let pageViewController: TwoPageViewController<LeftViewController, RightViewController>
@@ -54,19 +54,27 @@ final class TwoTabViewController: UIViewController, ControllerInjectable {
             .isActive = true
         
         didMove(toParent: self)
+        
+        dependency.pageViewController.noticeable = self
     }
     
     @objc func rightButtonTapped() {
         UIView.animate(withDuration: 0.3, animations: {
-            self.underLine.transform = CGAffineTransform.identity
+            self.underLine.transform =
+                CGAffineTransform(translationX: self.view.frame.width / 2, y: 0)
         })
+        dependency.pageViewController.setRightViewController()
     }
     
     @objc func leftButtonTapped() {
         UIView.animate(withDuration: 0.3, animations: {
-            self.underLine.transform =
-                CGAffineTransform(translationX: self.view.frame.width / 2, y: 0)
+            self.underLine.transform = CGAffineTransform.identity
         })
+        dependency.pageViewController.setLeftViewController()
+    }
+    
+    func paging(_ transform: CGAffineTransform) {
+        underLine.transform = transform
     }
 
 }
