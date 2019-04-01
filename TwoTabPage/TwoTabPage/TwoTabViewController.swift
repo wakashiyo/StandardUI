@@ -56,10 +56,17 @@ final class TwoTabViewController: UIViewController, ControllerInjectable {
         didMove(toParent: self)
     }
     
-    @objc func rightButtonTapped() {}
+    @objc func rightButtonTapped() {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.underLine.transform = CGAffineTransform.identity
+        })
+    }
     
-    @objc func leftButtonTapped() {}
-    
-    
+    @objc func leftButtonTapped() {
+        UIView.animate(withDuration: 0.3, animations: {
+            self.underLine.transform =
+                CGAffineTransform(translationX: self.view.frame.width / 2, y: 0)
+        })
+    }
 
 }
